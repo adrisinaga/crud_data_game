@@ -45,7 +45,7 @@ class EditGamePage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(2)),
                   ),
                 ),
-                onPressed: () => _editGame(gameController.id.value),
+                onPressed: ()=> _editGame(gameController.id.value),
                 child: Text('Edit'),
               )
             ],
