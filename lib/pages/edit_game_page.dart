@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class EditGamePage extends StatelessWidget {
   final GameController gameController = Get.put(GameController());
 
-  void editGame(int id) {
+  void _editGame(int id) {
     gameController.editGame(id);
   }
 
@@ -45,7 +45,7 @@ class EditGamePage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(2)),
                   ),
                 ),
-                onPressed: () => editGame(gameController.id.value),
+                onPressed: () => _editGame(gameController.id.value),
                 child: Text('Edit'),
               )
             ],
