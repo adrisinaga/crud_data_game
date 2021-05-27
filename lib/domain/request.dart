@@ -1,13 +1,13 @@
 import 'package:http/http.dart' as http;
 
 ///jika melalui real device
-// const urlBase = 'http://192.168.10.103/polahidupsehat/';
+// const urlBase = 'http://192.168.10.103/datagame/';
 
 ///jika melalui emulator
 const urlBase = 'http://10.0.2.2/datagame/';
 
 // ///jika melalui genymotion
-// const urlBase = 'http://10.0.3.2/polahidupsehat/';
+// const urlBase = 'http://10.0.3.2/datagame/';
 
 class Request{
   final String url;
@@ -21,6 +21,6 @@ class Request{
 
   Future<http.Response> get(){
     print(urlBase+url);
-    return http.get(Uri.parse('http://10.0.2.2/datagame/get_data_game.php')).timeout(Duration(minutes: 2));
+    return http.get(Uri.parse(urlBase+url)).timeout(Duration(minutes: 2));
   }
 }
